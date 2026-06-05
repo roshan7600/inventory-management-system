@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: inventory_backend
+
+    environment:
+      DB_USER: postgres
+      DB_PASSWORD: roshan2000
+      DB_HOST: host.docker.internal
+      DB_PORT: 5432
+      DB_NAME: inventory_db
+
+    ports:
+      - "8000:8000"
